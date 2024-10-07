@@ -1,0 +1,135 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    border: none
+    outline: none
+
+:root
+    --padd: 80px
+    --fz: 22px
+
+$prime: #B8261A
+$second: #000
+$padd: var(--padd)
+$fz: var(--fz)
+
+html
+    scroll-behavior: smooth
+
+body
+    min-height: 100vh
+    color: #000
+    background-color: #fff
+    font-family: 'Roboto', sans-serif
+
+.container
+    width: 100%
+    max-width: calc( 1600px + $padd + $padd )
+    margin: 0 auto
+    padding: 0 $padd
+
+img
+    max-width: 100%
+
+a,
+button
+    display: inline-block
+    text-decoration: none
+    transition: all ease .2s
+    background-color: transparent
+    &:active
+        transform: scale(.98)
+
+    img
+        display: block
+
+strong
+    font-weight: 600
+
+section
+    padding: 60px 0
+
+h2, .h2
+    font-size: 55px
+    line-height: 64px
+    font-weight: 900
+    color: #4C4C4C
+    margin: 0 0 40px
+
+mark
+    background-color: $prime
+    color: #000
+    display: inline-block
+    padding: 2px 8px 4px
+
+.btn
+    font-size: $fz
+    line-height: 28px
+    font-weight: 500
+    text-transform: uppercase
+    color: white
+    display: inline-block
+    border-radius: 40px
+    background-color: $prime
+    padding: 12px 32px 11px
+    position: relative
+    z-index: 1
+    overflow: hidden
+    transition: .3s ease all
+    &:hover
+        background-color: rgba($prime, .8)
+
+    &[disabled]
+
+    &.--white
+        color: #000
+        background-color: #fff
+        &:hover
+            background-color: rgba(255, 255, 255, .8)
+
+    @media screen and ( max-width: 1500px )
+        font-size: 18px
+
+.fx, .fx-w, .fx-ac, .fx-as, .fx-col, .fx-jb, .fx-ae
+    display: flex
+
+.fx
+    &-col
+        flex-direction: column
+
+    &-w
+        flex-wrap: wrap
+
+    &-as
+        align-items: flex-start
+
+    &-ac
+        align-items: center
+
+    &-jc
+        justify-content: center
+
+    &-jb
+        justify-content: space-between
+
+    &-ae
+        align-items: end
+
+.mob
+    &-show
+        @media screen and ( min-width: 1000px )
+            display: none
+
+@media screen and ( max-width: 1500px )
+    :root
+        --padd: 40px
+        --fz: 20px
+
+    .btn
+        padding: 12px 26px 11px
+
+@media screen and ( max-width: 1000px )
+    :root
+        --padd: 15px
+        --fz: 20px
