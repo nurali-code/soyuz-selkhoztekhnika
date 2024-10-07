@@ -26,7 +26,9 @@ body
 .container
     width: 100%
     max-width: calc( 1600px + $padd + $padd )
-    margin: 0 auto
+    margin:
+        left: auto
+        right: auto
     padding: 0 $padd
 
 img
@@ -133,3 +135,19 @@ mark
     :root
         --padd: 15px
         --fz: 20px
+
+    h2, .h2
+        font-size: 30px
+        line-height: 44px
+
+@media screen and ( max-width: 720px )
+    .btn
+        font-size: 18px
+        line-height: 18px
+        padding: 8px 20px
+
+    h2, .h2
+        font-size: 24px
+        line-height: 28px
+        text-align: center
+        margin-bottom: 25px

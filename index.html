@@ -11,6 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
 
 </head>
 
@@ -58,11 +59,13 @@
 
     <main class="main">
         <div class="container">
-            <img src="img/logo-2.svg" class="main__head" alt="i">
-            <p class="main__text">
-                Качественная техника от отечественного производителя
-            </p>
-            <button class="btn">КАТАЛОГ ТЕХНИКИ</button>
+            <div class="content">
+                <img src="img/logo-2.svg" class="main__head" alt="i">
+                <p class="main__text">
+                    Качественная техника от отечественного производителя
+                </p>
+                <button class="btn">КАТАЛОГ ТЕХНИКИ</button>
+            </div>
         </div>
         <img src="img/main.jpg" alt="i" class="main__bg">
     </main>
@@ -70,7 +73,7 @@
     <section class="cat">
         <div class="container">
             <h2>КАТАЛОГ <br> СЕЛЬХОЗТЕХНИКИ</h2>
-            <div class="fx cat-wrap">
+            <div class="fx-w cat-wrap">
                 <a href="#" class="item">
                     <img src="img/it-1.jpg" alt="i" loading="lazy">
                     <h3>Культиваторы</h3>
@@ -83,6 +86,78 @@
                     <img src="img/it-3.jpg" alt="i" loading="lazy">
                     <h3>Волокуши и другое</h3>
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="galery-slider fx">
+        <div class="galery-slide">
+            <a href="img/g-1.jpg" data-fancybox="g-2">
+                <img src="img/g-1.jpg" alt="i">
+            </a>
+        </div>
+        <div class="galery-slide">
+            <a href="img/g-2.jpg" data-fancybox="g-2">
+                <img src="img/g-2.jpg" alt="i">
+            </a>
+        </div>
+        <div class="galery-slide">
+            <a href="img/g-3.jpg" data-fancybox="g-2">
+                <img src="img/g-3.jpg" alt="i">
+            </a>
+        </div>
+        <div class="galery-slide">
+            <a href="img/g-2.jpg" data-fancybox="g-2">
+                <img src="img/g-2.jpg" alt="i">
+            </a>
+        </div>
+        <div class="galery-slide">
+            <a href="img/g-3.jpg" data-fancybox="g-2">
+                <img src="img/g-3.jpg" alt="i">
+            </a>
+        </div>
+    </div>
+
+    <section class="review">
+        <div class="container">
+            <h2>ОТЗЫВЫ НАШИХ КЛИЕНТОВ</h2>
+            <div class="review-slider">
+                <div class="review-item fx-ac">
+                    <img src="img/rev-1.jpg" alt="i" loading="lazy" class="review-img">
+                    <div class="review-title">
+                        <h3 class="review__heading">Иван Курдогло</h3>
+                        <p class="review__rate fx-ac">
+                            <span>Оценка 5</span> <img src="img/stars.svg" alt="i" loading="lazy">
+                        </p>
+                        <p class="review__text">
+                            Купил кпш-13. Уже год работает, надежная, качественная техника, спасибо!
+                        </p>
+                    </div>
+                </div>
+                <div class="review-item fx-ac">
+                    <img src="img/rev-2.jpg" alt="i" loading="lazy" class="review-img">
+                    <div class="review-title">
+                        <h3 class="review__heading">Сергей Ситников</h3>
+                        <p class="review__rate fx-ac">
+                            <span>Оценка 5</span> <img src="img/stars.svg" alt="i" loading="lazy">
+                        </p>
+                        <p class="review__text">
+                            Отличная техника, крепкая, надежная и недорогая. Рекомендую!
+                        </p>
+                    </div>
+                </div>
+                <div class="review-item fx-ac">
+                    <img src="img/rev-3.jpg" alt="i" loading="lazy" class="review-img">
+                    <div class="review-title">
+                        <h3 class="review__heading">Иван Курдогло</h3>
+                        <p class="review__rate fx-ac">
+                            <span>Оценка 5</span> <img src="img/stars.svg" alt="i" loading="lazy">
+                        </p>
+                        <p class="review__text">
+                            Купил кпш-13. Уже год работает, надежная, качественная техника, спасибо!
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -103,7 +178,10 @@
         </div>
     </footer>
 
-    <!-- <script src="js/script.js"></script> -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
 </body>
 
 </html>

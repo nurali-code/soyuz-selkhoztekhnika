@@ -1,5 +1,6 @@
 @import 'normolize'
 @import 'elements'
+@import 'slick'
 @import 'header'
 @import 'footer'
 
@@ -9,8 +10,8 @@
     padding: 0 0 8vw
     top: -10px
     &__head
-        max-width: 520px
         margin: 0 0 84px
+        width: 100%
 
     &__bg
         position: absolute
@@ -22,13 +23,16 @@
         object-position: center bottom
         z-index: -111
 
+    .content
+        width: 520px
+        max-width: 70%
+
     .container
         padding: 8vw $padd 7.5vw
 
     &__text
         font-size: 30px
         text-align: center
-        max-width: 520px
         color: white
         margin-bottom: 16px
 
@@ -38,6 +42,23 @@
         width: 100%
         max-width: 520px
 
+    @media screen and ( max-width: 1000px )
+        .content
+
+    @media screen and ( max-width: 720px )
+        .container
+            padding: 13vw var(--padd) 14.5vw
+
+        &__head
+            margin-bottom: 30px
+
+        &__text
+            font-size: 16px
+
+        .btn
+            padding: 8px 20px
+            font-size: 14px
+
 .cat
     padding: 0 0 120px
     &-wrap
@@ -45,16 +66,17 @@
 
     .item
         text-align: center
-        width: 33.33%
+        width: calc( 33.33% - 34px )
         padding: 34px
         border-radius: 15px
-        box-shadow: 0px 3.97px 25px 0px #0000001A
+        box-shadow: 0px 3.97px 25px 0px rgba(0,0,0,.1)
         color: #000
         img
             display: block
             width: 100%
             margin: 0 0 20px
         h3
+            font-weight: 600
             font-size: 34px
             margin: 0
 
@@ -63,8 +85,140 @@
             gap: 20px
 
         .item
+            width: calc( 33.33% - 14px )
             h3
                 font-size: 26px
 
     @media screen and ( max-width: 1000px )
+        &-wrap
+            gap: 20px
+        .item
+            width: calc( 50% - 10px )
+            padding: 10px
+            img
+                margin-bottom: 12px
+
+    @media screen and ( max-width: 720px )
+        &-wrap
+            gap: 16px
+
+        .item
+            width: calc( 50% - 8px )
+            border-radius: 5px
+            h3
+                font-size: 14px
+
+.galery
+    text-align: center
+    overflow: hidden
+    h2
+        margin-bottom: 32px
+
+    &-slide
+        width: 75vw
+        max-width: 777px
+        padding: 110px 0
+        @media screen and ( max-width: 720px )
+            padding: 60px 0
+        @media screen and ( max-width: 720px )
+            padding: 40px 0
+
+    &-slider
+        max-width: 1920px
+        margin: 0 auto
+
+        img
+            margin: 0 auto
+            display: block
+            border-radius: 15px
+
+        .slick
+            &-slide
+                transition: transform 0.3
+            &-track
+                display: flex !important
+                align-items: center
+
+            &-slide,
+            &-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"]
+                transform: scale(0.8)
+                opacity: .5
+
+            &-center,
+            &-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"]
+                transform: scale(1.12)
+                opacity: 1
+
+            @media screen and ( max-width: 720px )
+                &-slide,
+                &-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"]
+                    transform: scale(0.8)
+
+                &-center,
+                &-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"]
+                    transform: scale(1.11)
+
+.review
+    overflow: hidden
+    h2
+        text-align: center
+
+    &-item
+        margin: 20px
+        gap: 40px
+        padding: 25px
+        max-width: 660px
+        border-radius: 15px
+        box-shadow: 0px 3.97px 25px 0px rgba(0,0,0,.1)
+        @media screen and ( min-width: 720px )
+            display: flex !important
+
+    .slick
+        &-track,
+        &-list
+            overflow: visible
+
+    &__heading
+        font-size: 30px
+        margin: 0 0 8px
+
+    &__rate
+        gap: 10px
+        color: #F3BF07
+        margin: 0 0 16px
+        font-size: 20px
+
+    &__text
+        font-weight: 300
+        font-size: 22px
+
+    &-img
+        border-radius: 50%
+        width: 180px
+        aspect-ratio: 1/1
+
+    @media screen and ( max-width: 720px )
+        h2 
+            margin-bottom: 15px
+
+        &-item
+            max-width: 85vw
+            margin: 10px
         
+        &-img 
+            width: 120px
+            margin-bottom: 10px
+
+        &__heading 
+            font-size: 22px
+            margin-bottom: 6px
+
+        &__rate 
+            font-size: 16px
+            gap: 6px
+            margin-bottom: 10px
+            img 
+                max-height: 19px
+
+        &__text 
+            font-size: 18px
