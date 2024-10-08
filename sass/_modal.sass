@@ -1,0 +1,108 @@
+.modal
+    // display: none
+    position: fixed
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    z-index: 9999999999
+    background-color: rgba(#000, 0.6)
+    padding: 0
+    box-sizing: border-box
+    &-content
+        width: 94%
+        min-height: 100px
+        max-height: 98%
+        display: block
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        background-color: #fff
+        max-width: 613px
+        overflow-y: scroll
+        color: #000
+        text-align: left
+        border-radius: 24px
+        -ms-overflow-style: none
+        scrollbar-width: none
+        &::-webkit-scrollbar
+            display: none
+            width: 0
+            height: 0
+
+    .h2
+        font-size: 32px
+        padding: 30px
+        color: white
+        background-color: $prime
+        margin-bottom: 20px
+
+    p
+        font-size: 18px
+        padding: 0 30px
+        line-height: 130%
+        margin: 0 0 15px
+
+    label
+        display: block
+        width: 100%
+        margin-bottom: 5px
+        color: #4C4C4C
+        opacity: .8
+
+    .btn
+        width: 49%
+
+    .inp-wrap
+        display: block
+        width: 49%
+        &.checkbox
+            label
+                position: relative
+                z-index: 1
+                padding-left: 34px
+                &::before
+                    content: ''
+                    display: block
+                    width: 20px
+                    height: 20px
+                    border: 1px solid #C8C8C8
+                    position: absolute
+                    top: 2px
+                    left: 0
+                    border-radius: 2px
+                    background-repeat: no-repeat
+                    background-position: center center
+                    background-size: contain
+            input
+                display: none
+                &:checked ~ label
+                    &::before
+                        background-image: url('../img/check.svg')
+                        border-color: $prime
+                        background-color: $prime
+
+    form
+        padding: 0 30px 40px
+        gap: 20px 0
+
+    &-close
+        position: absolute
+        top: 18px
+        right: 26px
+        font-weight: normal
+        font-size: 50px
+        line-height: 120%
+        color: #fff
+        z-index: 999
+        width: 36px
+
+    @media screen and ( max-width: 720px )
+        &-content
+            padding: 30px 28px
+            .h2
+                font-size: 24px
+
+            p
+                font-size: 13px

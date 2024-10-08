@@ -21,19 +21,19 @@ $('.galery-slider').slick({
     slidesToScroll: 1,
 });
 
-$('.review-slider').slick({
-    infinite: false,
-    dots: false,
-    arrows: false,
-    slidesToShow: 1,
-    swipeToSlide: true,
-    slidesToShow: 1,
-    variableWidth: true,
-    slidesToScroll: 1,
-    touchThreshold: 9,
-    centerPadding: '0',
-    slidesToScroll: 1,
-});
+// $('.review-slider').slick({
+//     infinite: false,
+//     dots: false,
+//     arrows: false,
+//     slidesToShow: 1,
+//     swipeToSlide: true,
+//     slidesToShow: 1,
+//     variableWidth: true,
+//     slidesToScroll: 1,
+//     touchThreshold: 9,
+//     centerPadding: '0',
+//     slidesToScroll: 1,
+// });
 
 
 $("form").submit(function () {

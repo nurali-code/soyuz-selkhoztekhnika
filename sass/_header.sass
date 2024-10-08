@@ -77,6 +77,7 @@
             display: none
             &__item
                 width: 100%
+                font-size: 18px
                 max-width: 390px
                 text-align: left
                 margin: 0 auto
@@ -146,13 +147,17 @@
             color: #4C4C4C
             transition: all ease .3s
             transform: translateX(110%)
+            overflow-y: scroll
+            &::-webkit-scrollbar
+                display: none
             li
                 width: 100%
 
             &__link, a
+                padding: 10px
                 color: #4C4C4C
                 width: 100%
-                font-size: 24px
+                font-size: 20px
 
             .btn.--white
                 color: white

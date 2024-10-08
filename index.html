@@ -29,7 +29,7 @@
                 </span>
             </p>
             <a href="#" class="logo"><img src="img/logo.svg" alt="i"></a>
-            <a href="#" class="btn --white">Заказать сельхозтехнику</a>
+            <a href="#" class="btn --white" data-modal="modal">Заказать сельхозтехнику</a>
             <button class="btn__menu"><span></span></button>
         </div>
         <ul class="header-nav fx-ac fx-jb">
@@ -67,7 +67,10 @@
                 <button class="btn --lg">КАТАЛОГ ТЕХНИКИ</button>
             </div>
         </div>
-        <img src="img/main.jpg" alt="i" class="main__bg">
+        <picture>
+            <source media="(min-width: 1100px)" srcset="img/main.jpg">
+            <img src="img/main-mob.jpg" alt="i" class="main__bg">
+        </picture>
     </main>
 
     <section class="cat">
@@ -98,11 +101,34 @@
                 <img src="img/why-pc.png" class="why__img mob-show" alt="i" loading="lazy">
                 <p class="text">
                     Мы предлагаем только качественную сельскохозяйственную технику, которая поможет вам в агрономии.
-                    Наша команда профессионалов всегда готова помочь вам с выбором и ответить на все вопросы
+                    Наша команда профессионалов всегда готова помочь вам с выбором и ответить на все вопросы <br>
+                    <a href="pdf/Сертификат ССТ.pdf" title="Скачать Сертификат" class="link fx-ac"
+                        download="Сертификат ССТ">
+                        <img src="img/pdf.svg" alt="i" loading="lazy">
+                        <span> Сертификат ССТ</span>
+                    </a>
                 </p>
                 <a href="#" class="btn --lg">Узнать больше</a>
             </div>
             <img src="img/why-pc.png" class="why__img mob-hide" alt="i" loading="lazy">
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container fx-jb fx-w">
+            <div class="item">
+                <h3>ВЫСОКОЕ <br> КАЧЕСТВО</h3>
+                <p>Соответствие высоким стандартам качества и надежности закладывается уже на этапе проектирования нашей
+                    техники.</p>
+            </div>
+            <div class="item">
+                <h3>ШИРОКИЙ <br> АССОРТИМЕНТ</h3>
+                <p>Мы постоянно расширяем свой ассортимент и налицие на складе.</p>
+            </div>
+            <div class="item">
+                <h3>ВЫСОКОЕ <br> КАЧЕСТВО</h3>
+                <p>Мы готовы рассмотреть любые ваши предложения о сотрудничестве</p>
+            </div>
         </div>
     </section>
 
@@ -199,7 +225,7 @@
                     <h2>НАШИ КОНТАКТЫ</h2>
                     <p class="text">
                         Алтайский край, г. Барнаул, <br>
-                        Северо-Западная улица, д. 2, оф. 101
+                        Северо-Западная улица, д. 2/16, оф. 101
                     </p>
                     <p class="header-cont">
                         <span class="fx-ac header-cont__item">
@@ -212,7 +238,9 @@
                         </span>
                     </p>
                 </div>
-                <iframe src="" frameborder="0"></iframe>
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A0839fcd474fe929800f3a0167cd0bfcd900f1a19b8a05e85f59c78dbe3d756e3&amp;source=constructor"
+                    loading="lazy"></iframe>
             </div>
         </div>
     </section>
@@ -223,7 +251,8 @@
                 <a href="#">Политика конфиденциальности</a>
                 <br>
                 <br>
-                ООО "СОЮЗСЕЛЬХОЗТЕХНИКА", ОГРН 1232200002627 <br>
+                ООО "СОЮЗСЕЛЬХОЗТЕХНИКА", <br class="mob-show">
+                ОГРН 1232200002627 <br>
                 © Все права защищены.
             </p>
             <div class="soc fx-ac">
@@ -232,6 +261,29 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h3 class="h2">ОСТАВЬТЕ ЗАЯВКУ</h3>
+            <p>Наши менеджеры свяжутся с Вами и ответят на все интересующие вопросы.</p>
+            <form action="#" class="fx-w fx-jb">
+                <div class="inp-wrap">
+                    <label for="m_name">Ваше имя, фамилия</label>
+                    <input type="text" id="m_name" name="uname" required placeholder="Иван Иванов">
+                </div>
+                <div class="inp-wrap">
+                    <label for="m_phone">Номер телефона</label>
+                    <input type="tel" name="uphone" id="m_phone" required placeholder="+7 999 999 99-99">
+                </div>
+                <div class="inp-wrap checkbox">
+                    <input type="checkbox" name="checkbox" checked id="checkbox" required>
+                    <label for="checkbox" class="checkbox">Я даю согласие на обработку моей личной информации</label>
+                </div>
+                <button type="submit" class="btn">ОТПРАВИТЬ</button>
+            </form>
+        </div>
+    </div>
 
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/slick.min.js"></script>
