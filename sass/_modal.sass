@@ -36,6 +36,7 @@
         padding: 30px
         color: white
         background-color: $prime
+        text-align: left
         margin-bottom: 20px
 
     p
@@ -99,10 +100,32 @@
         width: 36px
 
     @media screen and ( max-width: 720px )
-        &-content
-            padding: 30px 28px
-            .h2
-                font-size: 24px
+        &-close
+            top: 9px
+            right: 20px
+            font-weight: normal
+            font-size: 40px
 
-            p
-                font-size: 13px
+        label
+            font-size: 14px
+            margin-bottom: 2px
+
+        .h2
+            padding: 20px 30px
+            font-size: 24px
+
+        p
+            font-size: 16px
+
+        form
+            display: block
+            padding-bottom: 30px
+
+        .inp-wrap
+            margin-bottom: 15px
+
+        .btn
+            min-height: 50px
+        .btn,
+        .inp-wrap
+            width: 100%
