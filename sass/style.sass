@@ -56,6 +56,7 @@
 
 .cat
     padding-top: 0
+
     &-wrap
         gap: 50px
 
@@ -70,10 +71,26 @@
             display: block
             width: 100%
             margin: 0 0 20px
+
         h3
             font-weight: 600
             font-size: 34px
             margin: 0
+
+    &--main
+        padding: 78px 0
+        .h2
+            text-align: center
+
+        .cat-wrap
+            padding-bottom: 60px
+            &:last-of-type
+                padding-bottom: 0
+
+    .subheading
+        font-size: 30px
+        margin: 0 0 30px
+        color: #4C4C4C
 
     @media screen and ( max-width: 1500px )
         &-wrap
@@ -87,21 +104,33 @@
     @media screen and ( max-width: 1000px )
         &-wrap
             gap: 20px
+
         .item
             width: calc( 50% - 10px )
-            padding: 10px
+            padding: 10px 10px 30px
             img
                 margin-bottom: 12px
 
     @media screen and ( max-width: 720px )
+        .subheading
+            text-align: left
+            font-size: 20px
+            margin-bottom: 15px
+
         &-wrap
-            gap: 16px
+            gap: 15px 10px
 
         .item
-            width: calc( 50% - 8px )
-            border-radius: 5px
+            width: calc( 50% - 5px )
+            border-radius: 8px
+            padding: 10px 10px 15px
             h3
-                font-size: 16px
+                font-size: 14px
+
+        &--main
+            padding: 38px 0 60px
+            .cat-wrap
+                padding-bottom: 40px
 
 .why
     overflow: hidden
@@ -374,7 +403,7 @@
                 margin-bottom: 10px
 
             h2
-                font-size: 34px
+                font-size: 26px
                 text-align: left
 
             .text
@@ -394,5 +423,53 @@
                     font-size: 20px
                     img
                         width: 25px
+
+.card
+    padding: 60px 0
+    .h2
+        text-align: center
+
+    &-wrap
+        gap: 50px
+
+    &-img,
+    &-title
+
+    &-img
+        width: calc( 56% - 25px )
+        border-radius: 15px
+        overflow: hidden
+        box-shadow: 0px 3.97px 25px 0px rgba(0,0,0,.1)
+        padding: 30px
+        img
+            display: block
+            width: 100%
+
+    &-title
+        width: calc( 46% - 25px )
+        p
+            font-size: 24px
+            line-height: 130%
+            margin: 0 0 30px
+
+        ul
+            list-style: none
+            margin: 0 0 30px
+            li
+                font-size: 24px
+                line-height: 130%
+                margin-bottom: 4px
+                &:last-child
+                    margin: 0
+
+    &-price
+        text-align: center
+        padding: 30px
+        border-radius: 15px
+        box-shadow: 0px 3.97px 25px 0px rgba(0,0,0,.1)
+        .h2
+            font-size: 30px
+            text-decoration: underline
+            margin: 0 0 20px
 
 // @import 'review'
