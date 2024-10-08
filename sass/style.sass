@@ -100,7 +100,7 @@
             width: calc( 50% - 8px )
             border-radius: 5px
             h3
-                font-size: 14px
+                font-size: 16px
 
 .why
     overflow: hidden
@@ -226,5 +226,122 @@
                 &-center,
                 &-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"]
                     transform: scale(1.11)
+
+.partners
+    text-align: center
+    img
+        width: 17%
+        display: block
+        max-height: 170px
+        object-position: center center
+        object-fit: contain
+        margin: 0 auto
+
+    @media screen and ( max-width: 1000px )
+        &-wrap
+            overflow-x: scroll
+            gap: 32px
+            width: 100vw
+            position: relative
+            z-index: 1
+            left: calc( 0px - $padd )
+            padding: 0 $padd
+            &::-webkit-scrollbar
+                display: none
+
+        img
+            width: 32vw
+
+.contacts
+    &-box
+        padding: 80px
+        border-radius: 40px
+        background-color: rgba(#090C4B, .9)
+        color: #fff
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: cover
+        background-image: url('../img/patern.svg')
+        *
+            color: #fff
+
+        .logo
+            width: 100%
+            max-width: 54%
+            margin-bottom: 20px
+
+        .title
+            width: 45%
+
+        iframe
+            border-radius: 15px
+            background-color: #f6f6f6
+            width: 53%
+            min-height: 450px
+            margin-left: auto
+
+        .text
+            font-size: 26px
+            margin-bottom: 40px
+
+        .header-cont
+            display: block !important
+            &__item
+                font-weight: bold
+                font-size: 26px
+                img
+                    width: 30px
+
+        h2
+            font-size: 44px
+            margin-bottom: 10px
+
+        @media screen and ( max-width: 1200px )
+            padding: 30px
+            .logo
+                max-width: 68%
+
+        @media screen and ( max-width: 1000px )
+            .header-cont 
+                a 
+                    color: white
+                img 
+                    filter: brightness(10)
+
+        @media screen and ( max-width: 900px )
+            display: block
+            padding: 20px
+            border-radius: 15px
+            .title 
+                width: 100%
+
+            .logo 
+                margin-bottom: 10px
+
+            h2 
+                font-size: 34px
+                text-align: left
+
+            .text 
+                font-size: 18px
+                margin-bottom: 10px
+
+            iframe
+                margin-top: 20px
+                border-radius: 10px
+                width: 100%
+                min-height: 400px
+
+            .header-cont 
+                width: 100%
+                &__item 
+                    gap: 11px
+                    font-size: 20px
+                    img 
+                        width: 25px
+            
+        
+
+            
 
 // @import 'review'

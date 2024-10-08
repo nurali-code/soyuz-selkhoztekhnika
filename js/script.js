@@ -1,6 +1,6 @@
 
-$('.btn__menu').on('click', function () { $('.header .nav, .btn__menu, body').toggleClass('is_active'); })
-$('.nav__link').on('click', function () { $('.header .nav, .btn__menu, body').removeClass('is_active'); })
+$('.btn__menu').on('click', function () { $('.header-nav, .btn__menu, body').toggleClass('is_active'); })
+$('.header-nav__link').on('click', function () { $('.header-nav, .btn__menu, body').removeClass('is_active'); })
 
 // $('input[name="uphone"]').inputmask({ "mask": "+7-999-999-99-99" });
 

@@ -124,6 +124,15 @@
                     top: -10px
                     left: 0
 
+            &.is_active span
+                transform: rotate(-45deg)
+                &::before
+                    background-color: rgba(0, 0, 0, 0)
+
+                &::after
+                    top: 50%
+                    transform: rotate(-90deg)
+
         &-nav
             position: fixed
             top: 70px
@@ -132,9 +141,11 @@
             width: 100%
             height: calc( 100% - 70px )
             background-color: #fff
-            display: none
+            display: block
             padding: 24px 20px
             color: #4C4C4C
+            transition: all ease .3s
+            transform: translateX(110%)
             li
                 width: 100%
 
@@ -148,3 +159,6 @@
                 background-color: $prime
                 padding: 15px 30px
                 margin: 15px auto 20px
+
+            &.is_active
+                transform: translateX(0)
