@@ -37,8 +37,6 @@
         margin-bottom: 16px
 
     .btn
-        font-size: 35px
-        padding: 20px 40px
         width: 100%
         max-width: 520px
 
@@ -55,12 +53,8 @@
         &__text
             font-size: 16px
 
-        .btn
-            padding: 8px 20px
-            font-size: 14px
-
 .cat
-    padding: 0 0 120px
+    padding-top: 0
     &-wrap
         gap: 50px
 
@@ -107,6 +101,81 @@
             border-radius: 5px
             h3
                 font-size: 14px
+
+.why
+    overflow: hidden
+    @media screen and ( min-width: 1000px )
+        .title
+            position: relative
+            z-index: 1
+            &::before
+                content: ''
+                pointer-events: none
+                display: block
+                width: 120%
+                height: 180%
+                position: absolute
+                z-index: -11
+                top: 52%
+                left: 24%
+                transform: translate(-50%, -50%)
+                background-repeat: no-repeat
+                background-position: center center
+                background-size: contain
+                background-image: url('../img/vec-bg.svg')
+
+    .descr
+        font-size: 20px
+        color: #1E1E1E
+        margin: 0 0 20px
+
+    h2
+        width: fit-content
+        padding-bottom: 3px
+        border-bottom: 2px solid $prime
+
+    .text
+        font-size: 26px
+        line-height: 130%
+        margin: 0 0 40px
+
+    .title,
+    &__img
+        width: 48%
+
+    @media screen and ( max-width: 1500px )
+        .text
+            font-size: 20px
+
+    @media screen and ( max-width: 1000px )
+        h2, .descr
+            margin:
+                left: auto
+                right: auto
+            text-align: center
+
+        .text
+            text-align: center
+
+        &__img
+            width: 100%
+            display: block
+
+        .btn
+            display: block
+
+        .title
+            width: 100%
+            max-width: 600px
+            margin: 0 auto
+
+    @media screen and ( max-width: 720px )
+        .descr
+            font-size: 14px
+            margin-bottom: 8px
+        .text
+            font-size: 16px
+            margin-bottom: 20px
 
 .galery
     text-align: center
@@ -158,67 +227,4 @@
                 &-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"]
                     transform: scale(1.11)
 
-.review
-    overflow: hidden
-    h2
-        text-align: center
-
-    &-item
-        margin: 20px
-        gap: 40px
-        padding: 25px
-        max-width: 660px
-        border-radius: 15px
-        box-shadow: 0px 3.97px 25px 0px rgba(0,0,0,.1)
-        @media screen and ( min-width: 720px )
-            display: flex !important
-
-    .slick
-        &-track,
-        &-list
-            overflow: visible
-
-    &__heading
-        font-size: 30px
-        margin: 0 0 8px
-
-    &__rate
-        gap: 10px
-        color: #F3BF07
-        margin: 0 0 16px
-        font-size: 20px
-
-    &__text
-        font-weight: 300
-        font-size: 22px
-
-    &-img
-        border-radius: 50%
-        width: 180px
-        aspect-ratio: 1/1
-
-    @media screen and ( max-width: 720px )
-        h2 
-            margin-bottom: 15px
-
-        &-item
-            max-width: 85vw
-            margin: 10px
-        
-        &-img 
-            width: 120px
-            margin-bottom: 10px
-
-        &__heading 
-            font-size: 22px
-            margin-bottom: 6px
-
-        &__rate 
-            font-size: 16px
-            gap: 6px
-            margin-bottom: 10px
-            img 
-                max-height: 19px
-
-        &__text 
-            font-size: 18px
+// @import 'review'

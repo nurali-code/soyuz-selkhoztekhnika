@@ -1,0 +1,64 @@
+.review
+    overflow: hidden
+    h2
+        text-align: center
+
+    &-item
+        margin: 20px
+        gap: 40px
+        padding: 25px
+        max-width: 660px
+        border-radius: 15px
+        box-shadow: 0px 3.97px 25px 0px rgba(0,0,0,.1)
+        @media screen and ( min-width: 720px )
+            display: flex !important
+
+    .slick
+        &-track,
+        &-list
+            overflow: visible
+
+    &__heading
+        font-size: 30px
+        margin: 0 0 8px
+
+    &__rate
+        gap: 10px
+        color: #F3BF07
+        margin: 0 0 16px
+        font-size: 20px
+
+    &__text
+        font-weight: 300
+        font-size: 22px
+
+    &-img
+        border-radius: 50%
+        width: 180px
+        aspect-ratio: 1/1
+
+    @media screen and ( max-width: 720px )
+        h2
+            margin-bottom: 15px
+
+        &-item
+            max-width: 85vw
+            margin: 10px
+
+        &-img
+            width: 120px
+            margin-bottom: 10px
+
+        &__heading
+            font-size: 22px
+            margin-bottom: 6px
+
+        &__rate
+            font-size: 16px
+            gap: 6px
+            margin-bottom: 10px
+            img
+                max-height: 19px
+
+        &__text
+            font-size: 18px
