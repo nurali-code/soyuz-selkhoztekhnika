@@ -21,6 +21,47 @@ $('.galery-slider').slick({
     slidesToScroll: 1,
 });
 
+$('.card-slider').slick({
+    infinite: false,
+    speed: 300,
+    arrows: false,
+    dots: false,
+    swipeToSlide: true,
+    slidesToShow: 1,
+    asNavFor: '.card-navs',
+    touchThreshold: 9,
+    fade: true,
+    responsive: [
+        {
+            breakpoint: 1100,
+            settings: {
+                fade: false,
+                infinite: true,
+            }
+        }
+    ]
+});
+$('.card-navs').slick({
+    infinite: false,
+    draggable: true,
+    // swipeToSlide: () => {
+    //     $('.card-nav').lenght >= 3 ? ret = true : ret = false;
+    //     return ret;
+    // },
+    dots: false,
+    focusOnSelect: true,
+    arrows: false,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    asNavFor: '.card-slider',
+    responsive: [
+        {
+            breakpoint: 1000,
+            settings: "unslick"
+        }
+    ]
+});
+
 // $('.review-slider').slick({
 //     infinite: false,
 //     dots: false,
