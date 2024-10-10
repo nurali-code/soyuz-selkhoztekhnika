@@ -432,9 +432,6 @@
     &-wrap
         gap: 50px
 
-    &-img,
-    &-title
-
     &-slider
         margin: 0 0 15px
         padding: 30px
@@ -447,6 +444,7 @@
         img
             aspect-ratio: 16/8
             object-fit: contain
+
     &-nav
         margin: 10px
         padding: 7px
@@ -488,6 +486,10 @@
             font-size: 33px
 
     &-info
+        margin-top: 40px
+        box-shadow: 0px 3px 15px 0px rgba(0,0,0,.08)
+        border-radius: 15px
+        padding: 54px
         &__list
             max-width: 1034px
             margin: 0 auto
@@ -517,19 +519,62 @@
                         background-color: rgba(0, 0, 0, 0) !important
 
     @media screen and ( max-width: 1000px )
-        &-wrap 
+        padding: 40px 0
+
+        &-wrap
             display: block
+
         &-img,
         &-title
             width: 100%
 
-        &-navs
-            display: none
+        &-slider
+            padding: 15px
+        &-nav
+            margin: 6px 6px 20px
 
+        &-title
+            p
+                font-size: 18px
+                margin-bottom: 15px
+
+            ul
+                margin-bottom: 15px
+                li
+                    font-size: 18px
+
+        &-price
+            .h2
+                font-size: 28px
+
+            .btn
+                font-size: 24px
+
+    @media screen and ( max-width: 720px )
+        &-info
+            padding: 25px 12px
+            &__list
+                li
+                    font-size: 14px
+                    ul
+                        padding-left: 10px
 
 .tabs
-    &__btn 
-        font-size: 20px 
-        padding: 10px
+    border: 1px solid #D7D7D7
+    border-radius: 15px
+    margin-bottom: 40px
+    &__btn
+        border-radius: 15px
+        font-size: 20px
+        padding: 15px
+        min-width: 20%
+        &.active
+            border: 1px solid $prime
+
+    @media screen and ( max-width: 720px )
+        margin-bottom: 15px
+        &__btn
+            font-size: 14px
+            padding: 12px 10px
 
 // @import 'review'

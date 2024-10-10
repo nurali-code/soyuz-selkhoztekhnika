@@ -54,12 +54,6 @@ $('.card-navs').slick({
     slidesToShow: 3,
     slidesToScroll: 3,
     asNavFor: '.card-slider',
-    responsive: [
-        {
-            breakpoint: 1000,
-            settings: "unslick"
-        }
-    ]
 });
 
 // $('.review-slider').slick({
