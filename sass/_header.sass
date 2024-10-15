@@ -20,7 +20,8 @@
         overflow: hidden
         list-style: none
         li
-            width: 14.28%
+            // width: 14.28%
+            width: 20%
 
         &__link
             display: block
@@ -141,7 +142,7 @@
             z-index: 999
             width: 100%
             height: calc( 100% - 70px )
-            background-color: #fff
+            background-color: #fff !important
             display: block
             padding: 24px 20px
             color: #4C4C4C
@@ -167,3 +168,16 @@
 
             &.is_active
                 transform: translateX(0)
+
+    &.--main
+        .header
+            &-top
+                background-color: $sec
+
+            &-nav
+                background-color: #3C219B
+                &__link
+                    @media screen and ( min-width: 1000px )
+                        &.active,
+                        &:hover
+                            background-color: #2729C5

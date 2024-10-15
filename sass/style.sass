@@ -494,15 +494,20 @@
             max-width: 1034px
             margin: 0 auto
             list-style: none
+            list-style-type: none
+            counter-reset: custom-counter
             span
                 display: block
-                max-width: 60%
+                max-width: 62%
+                &::first-letter
+                    text-transform: uppercase
+
             i
                 font-style: normal
-                max-width: 38%
+                max-width: 36%
 
             li
-                font-size: 20px
+                font-size: 19px
                 display: flex
                 list-style: disc
                 flex-wrap: wrap
@@ -513,10 +518,58 @@
 
                 ul
                     width: 100%
-                    padding-left: 25px
+                    padding-top: 5px
+                    list-style-type: none
                     li
                         padding: 5px 10px
+                        padding-left: 25px
+                        position: relative
+                        z-index: 1
                         background-color: rgba(0, 0, 0, 0) !important
+
+                        &::before
+                            content: ''
+                            width: 5px
+                            height: 5px
+                            border-radius: 50%
+                            background-color: #000
+                            display: inline-block
+                            position: absolute
+                            top: 15px
+                            font-weight: 500
+                            left: 5px
+                            z-index: 100
+
+                        @media screen and ( max-width: 720px )
+                            padding-left: 25px
+                            &::before
+                                top: 12px
+                                left: 11px
+            & > li
+                position: relative
+                z-index: 1
+                padding-left: 55px
+                &::before
+                    content: counter(custom-counter)
+                    counter-increment: custom-counter
+                    display: inline-block
+                    font-size: 18px
+                    position: absolute
+                    opacity: .5
+                    top: 11px
+                    font-weight: 500
+                    text-align: center
+                    min-width: 23px
+                    left: 18px
+                    z-index: 100
+
+                @media screen and ( max-width: 720px )
+                    padding-left: 36px
+                    &::before
+                        font-size: 14px
+                        left: 11px
+                        min-width: 16px
+                        text-align: center
 
     @media screen and ( max-width: 1000px )
         padding: 40px 0
@@ -557,7 +610,6 @@
                 li
                     font-size: 14px
                     ul
-                        padding-left: 10px
 
 .tabs
     border: 1px solid #D7D7D7
